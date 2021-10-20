@@ -1,0 +1,31 @@
+#Mở chức năng rewrite
+RewriteEngine On
+# Định nghĩa thư mục gốc
+RewriteBase //
+# bắt đầu viết lại đường dẫn
+RewriteRule ^trang-chu$ doan/trang-chu.php
+RewriteRule ^tin-tuc$ doan/tin-tuc.php
+RewriteRule ^san-pham$ doan/san-pham.php
+RewriteRule ^thanh-toan$ doan/thanh-toan.php
+RewriteRule ^gioi-thieu$ doan/gioi-thieu.php
+RewriteRule ^lien-he$ doan/lien-he.php
+RewriteRule ^gio-hang$ doan/gio-hang.php
+RewriteRule ^tim-kiem$ doan/tim-kiem.php
+RewriteRule ^kiem-tra-don-hang$ doan/kiem-tra-don-hang.php
+RewriteRule ^ma-giam-gia$ doan/ma-giam-gia.php
+RewriteRule ^gioi-thieu$ doan/gioi-thieu.php
+RewriteRule ^logout$ doan/logout.php
+RewriteRule ^dang-nhap$ doan/dang-nhap.php
+RewriteRule ^dang-ky$ doan/dang-ky.php
+
+RewriteRule ^(.*)-([0-9]*)-([0-9]*)$ doan/chi-tiet-don-hang.php?transaction_id=$2&sum_money=$3
+
+RewriteRule ^(.*)-([0-9]*)$ doan/danh-muc.php?cat_id=$2
+
+
+RewriteRule ^(.*)-v([0-9]*)$ doan/chi-tiet.php?product_id=$2
+
+
+RewriteRule ^(.*)-([0-9]*)-kieu([0-9]*)$ doan/detail_news.php?news_id=$2&type_news=$3
+
+
